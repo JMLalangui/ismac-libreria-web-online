@@ -7,8 +7,8 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.distribuida.entities.Categoria;
-import com.distribuida.entities.Cliente;
+
+import com.distribuida.entities.*;
 
 @Repository
 public class ClienteDaoImpl implements ClienteDao {
@@ -25,7 +25,7 @@ public class ClienteDaoImpl implements ClienteDao {
 	public List<Cliente> findAll() {
 		
 		Session session = sessionFactory.getCurrentSession();
-		return session.createQuery("from Cliente",Cliente.class).getResultList();
+		return session.createQuery("from Cliente order by id_cliente desc",Cliente.class).getResultList(); //se cambia un poco el hql para que ordene desde el ultimo registro y se visualice los cambios que se hagan en ese momento 
 	}
 
 	@Override

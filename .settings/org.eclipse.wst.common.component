@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
     <wb-module deploy-name="ismac-libreria-web-online">
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                
         <wb-resource deploy-path="/" source-path="/src/main/WebContent"/>
+        <dependent-module archiveName="Hola-mundo-web.war" deploy-path="/WEB-INF/lib" handle="module:/resource/Hola-mundo-web/Hola-mundo-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+                
         <property name="context-root" value="ismac-libreria-web-online"/>
+                
         <property name="java-output-path" value="/ismac-libreria-web-online/build/classes"/>
+            
     </wb-module>
+    
 </project-modules>

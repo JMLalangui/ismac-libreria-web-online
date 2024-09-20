@@ -1,6 +1,5 @@
 package com.distribuida.entities;
-import java.time.LocalDate;
-import java.util.Date;
+import java.time.*;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

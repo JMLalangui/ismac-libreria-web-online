@@ -3,18 +3,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/estilos.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css">
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Clientes</h1>
-		
-		<form action="del" method="get">
 
-			<input type="hidden" id="idCliente" name="idCliente" value="${cliente.idCliente}"/>
-			<strong>¿Desea eleminar el registro?</strong>
-			<button type="submit" >Eliminar</button>
+<section class="px-5 py-5 bg-light">
+	<h1>Clientes</h1>
+<div class="container table-responsive container mt-4">
+		
+		<table class ="table table-stripedtable-sm">
+			<form action="del" method="get">
+
+				<input type="hidden" id="idCliente" name="idCliente" value="${cliente.idCliente}"/>
+				<strong class="text-danger">¿Desea eleminar el registro? </strong>
+				
+				<button class="btn btn-info mb-1 me-2" type="submit">Eliminar</button>
+				<button class="btn btn-danger mb-1" type="button"
+					onclick="window.location.href='/ismac-libreria-web-online/clientes/findAll'; return false;">Cancelar</button>
 			
-		</form>
+			</form>
+		</table>
+	</div>
+</section>		
+
+
+<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js">></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resources/js/jquery-3.7.1.min.js">></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js">></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resources/js/bootstrap-table.min.js">></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resources/js/bootstrap-table-es-MX.min.js">></script>
+	<script src="https://kit.fontawesome.com/38d5ec97ef.js" crossorigin="anonymous"></script>
 </body>
 </html>

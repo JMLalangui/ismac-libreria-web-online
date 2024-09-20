@@ -21,7 +21,7 @@ public class LibroDaoImpl implements LibroDao {
 	@Transactional
 	public List<Libro> findAll() {
 		Session session = sessionFactory.getCurrentSession();
-		return session.createQuery("from Libro").getResultList();
+		return session.createQuery("from Libro order by id_libro desc").getResultList();
 	}
 
 	@Override

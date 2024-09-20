@@ -3,6 +3,7 @@
 	<name>ismac-libreria-web-online</name>
 	<comment></comment>
 	<projects>
+		<project>Hola-mundo-web</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

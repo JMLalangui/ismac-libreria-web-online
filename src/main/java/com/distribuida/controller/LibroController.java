@@ -1,18 +1,22 @@
 package com.distribuida.controller;
 
-import java.sql.Date;
-import java.time.LocalDate;
+import java.time.*;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.*;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import com.distribuida.dao.*;
-import com.distribuida.entities.*;
+import com.distribuida.dao.AutorDao;
+import com.distribuida.dao.CategoriaDao;
+import com.distribuida.dao.LibroDao;
+import com.distribuida.entities.Libro;
 
 @Controller
 @RequestMapping("/libros")
